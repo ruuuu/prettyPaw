@@ -3,9 +3,9 @@ import imageminWebp from "imagemin-webp";
 
 
 await imagemin(['src/img/*.{jpg,png}'], {
-      destination: 'src/img', // куда положить файлы котрые конвертируем
+      destination: 'src/img', // куда положить файлы после конвертации
       plugins: [
-            imageminWebp({quality: 70}),  // конвертурет картинки jpg,png в webp
+            imageminWebp({quality: 70}),  // плагин конвертирует картинки jpg,png в webp
       ]
 });
 

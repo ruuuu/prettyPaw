@@ -12,14 +12,21 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: Mulish, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+  background-color: $back;
+  color: $main;
+  
 }
 
 
-img, svg {
-  max-width: 100%;
+img, svg, video {
+  display: block; /*чтобы под картинкой ее было полоски*/
+  max-width: 100%; /*картинка не вывалится из блока*/
   max-height: 100%;
-  height: auto;
+  height: auto; /*высота подбирается относительно  max-width*/
 }
 
 
@@ -75,6 +82,12 @@ iframe {
 
 .container {
   // max-width: 1240px;
-  padding: 0 30px;
+  padding: 0 16px;
   margin: 0 auto;
 }
+
+
+.link-main{
+  
+}
+

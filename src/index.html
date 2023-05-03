@@ -7,14 +7,14 @@
 
   <!-- <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="img/favicon.png" type="image/png"> -->
-
+  <!--стили не подключаем здесь, тк вебпак автмоатически их подключает -->
   <title>Pretty Paw</title>
 </head>
 
 
 <body>
-  <header>
-    <div class="container header__contaier">
+  <header class="header">
+    <div class="container header__container">
         <img class="header__logo" src="img/logo.svg" alt="Логотип - Pretty Paw">
       
         <nav class="header__nav navigation">
@@ -54,10 +54,10 @@
         <h2 class="about__title">О компании</h2>
         
         <div class="about__content">
-          <p class="about_description">
+          <p class="about__description">
             Наш зоосад расположен в&nbsp;живописном месте и&nbsp;занимает большую территорию. Здесь содержатся различные виды животных со&nbsp;всего мира, начиная от&nbsp;крупных хищников, таких как львы и&nbsp;тигры, до&nbsp;разнообразных птиц, рыб и&nbsp;насекомых.
           </p>
-          <a class="about__link" href="#about">Подробнее</a>
+          <a class="about__link link-main" href="#about">Подробнее</a>
           <ul class="about__count-list">
             <li class="about__count-item">
               <p class="about__count">500+</p>
@@ -131,30 +131,32 @@
       </div>
     </section>
 
-    <section class="locaton">
-      <h2 class="visually-hidden">Локация зоопарка</h2><!--скрытые загловки нужны для слепых и сео-->
-      <ul class="location__list">
-        <li class="location__item">
-          <h3 class="location__title">Млекопитающие</h3>
-          <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
-        </li>
-        <li class="location__item">
-          <h3 class="location__title">Птицы</h3>
-          <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
-        </li>
-        <li class="location__item">
-          <h3 class="location__title">Рептилии</h3>
-          <p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем зоосаде можно увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
-        </li>
-        <li class="location__item">
-          <h3 class="location__title">Водный мир</h3>
-          <p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и&nbsp;обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно увидеть таких рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
-        </li>
-        <li class="location__item">
-          <h3 class="location__title">Насекомые</h3>
-          <p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или зависят от&nbsp;воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и&nbsp;других водных животных.</p>
-        </li>
-      </ul>
+    <section class="location">
+      <div class="container location__container">
+        <h2 class="visually-hidden">Локация зоопарка</h2><!--скрытые загловки нужны для слепых и сео-->
+        <ul class="location__list">
+          <li class="location__item">
+            <h3 class="location__title">Млекопитающие</h3>
+            <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
+          </li>
+          <li class="location__item">
+            <h3 class="location__title">Птицы</h3>
+            <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
+          </li>
+          <li class="location__item">
+            <h3 class="location__title">Рептилии</h3>
+            <p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем зоосаде можно увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
+          </li>
+          <li class="location__item">
+            <h3 class="location__title">Водный мир</h3>
+            <p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и&nbsp;обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно увидеть таких рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
+          </li>
+          <li class="location__item">
+            <h3 class="location__title">Насекомые</h3>
+            <p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или зависят от&nbsp;воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и&nbsp;других водных животных.</p>
+          </li>
+        </ul>
+    </div>
     </section>
 
     <section class="career">
@@ -165,72 +167,71 @@
           <p class="career__description">
             Карьера в&nbsp;компании &laquo;Зоосад&raquo; может предоставить много интересных и&nbsp;перспективных возможностей для людей, увлеченных животными и&nbsp;желающих развиваться в&nbsp;этой области.
           </p>
-          <a class="career__link" href="#career">Подробнее</a>
+          <a class="career__link link-main" href="#career">Подробнее</a>
         </div>
 
-        <div class="career__picture">
+        
           <div class="career__slider swiper">
             <ul class="career__image-list swiper-wrapper">
               <!-- Slides -->
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/elephant.webp" type="image/webp">
-                  <img src="img/elephant.jpg" alt="Слон" loading="lazy">
+                  <img class="career__image" src="img/elephant.jpg" alt="Слон" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/flamingos.webp" type="image/webp">
-                  <img src="img/flamingos.jpg" alt="Фламинго" loading="lazy">
+                  <img class="career__image" src="img/flamingos.jpg" alt="Фламинго" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/giraffe2.webp" type="image/webp">
-                  <img src="img/giraffe2.jpg" alt="Жирафы" loading="lazy">
+                  <img class="career__image" src="img/giraffe2.jpg" alt="Жирафы" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/giraffes.webp" type="image/webp">
-                  <img src="img/giraffes.jpg" alt="Жирафы" loading="lazy">
+                  <img class="career__image" src="img/giraffes.jpg" alt="Жирафы" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/parrots.webp" type="image/webp">
-                  <img src="img/parrots.jpg" alt="Лев" loading="lazy">
+                  <img class="career__image" src="img/parrots.jpg" alt="Лев" loading="lazy">
                 </picture>
               </li> 
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/meerkat.webp" type="image/webp">
-                  <img src="img/meerkat.jpg" alt="Тушканчик" loading="lazy">
+                  <img class="career__image" src="img/meerkat.jpg" alt="Тушканчик" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/parrots2.webp" type="image/webp">
-                  <img src="img/parrots2.jpg" alt="Попугаи" loading="lazy">
+                  <img class="career__image" src="img/parrots2.jpg" alt="Попугаи" loading="lazy">
                 </picture>
               </li>
               <li class="career__image-item swiper-slide">
                 <picture class="career__image-wrapper">
                   <source srcset="img/zebra.webp" type="image/webp">
-                  <img src="img/zebra.jpg" alt="Зебра" loading="lazy">
+                  <img class="career__image" src="img/zebra.jpg" alt="Зебра" loading="lazy">
                 </picture>
               </li>
             </ul>
             <!-- If we need pagination -->
             <div class="career__slider-pagination swiper-pagination"></div>
           </div>
-        </div>
 
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container footer__container">
         <img class="footer__logo" src="img/logo-black.svg" alt="Логотоип черного цвета- Pretty Paw">
       
