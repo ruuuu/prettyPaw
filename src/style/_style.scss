@@ -18,6 +18,10 @@ body {
   font-weight: 300;
   background-color: $back;
   color: $main;
+
+  @include lg{  // вызов миксина с наванием lg
+    font-size: 20px;
+  }
   
 }
 
@@ -84,10 +88,52 @@ iframe {
   // max-width: 1240px;
   padding: 0 16px;
   margin: 0 auto;
+
+  @include sm{  
+    padding: 0 24px; 
+   
+  }
+
+  @include md{  
+    padding: 0 32px; 
+  }
+
+ 
+  @include xl{  
+    padding: 0 30px; 
+  }
+
+  @include xxl{  // 4K
+    max-width: 2560px;
+    padding: 0 60px; 
+  }
+
+ 
 }
 
 
 .link-main{
-  
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 20px;
+  line-height: 1;
+  font-weight: 1000;
+  font-size: 16px;
+  color: $back;
+  background-color: $second;
+  border-radius: 80px;
+
+  &:after{      /* псевдоэлемент-стрелка (флекс элемент)*/
+    content: '';
+    display: block;
+   
+    background-image: url('../img/arrow.svg');
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 

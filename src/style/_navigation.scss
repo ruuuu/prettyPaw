@@ -1,0 +1,37 @@
+.navigation {
+
+      &__list {
+            display: none;
+            
+            @include xxl{  // 4K
+                  display: block;
+            }
+              
+      }
+
+
+      &__item {
+
+      }
+
+
+      &__button { // кнпока менб  для мобилки
+            display: block;
+            width: 36px;
+            height: 36px;
+            background-image: url('../img/menuMobile.svg');
+            background-position: center;
+            background-size: contain;
+
+            &--active{
+                  background-image: url('../img/close.svg');
+            }
+
+            @include lg{  
+                  width: 50px;
+                  height: 50px;
+      
+            }
+
+      }
+}

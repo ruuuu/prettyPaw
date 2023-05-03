@@ -1,0 +1,54 @@
+.hero {
+      position: relative; // для видео
+      background-image: url('../img/poster@1x.jpg');
+      background-image: image-set(
+            url('../img/poster@2x.webp') 2x,
+            url('../img/poster@1x.webp') 1x,
+            url('../img/poster@2x.jpg') 2x,
+            url('../img/poster@1x.jpg') 1x,
+      );
+      background-size: cover;
+      background-position: center;
+
+      @include md{ // > 768
+            background-image: url('../img/poster-tablet@1x.jpg');
+            background-image: image-set(
+                  url('../img/poster-tablet@2x.webp') 2x,
+                  url('../img/poster-tablet@1x.webp') 1x,
+                  url('../img/poster-tablet@2x.jpg') 2x,
+                  url('../img/poster-tablet@1x.jpg') 1x,
+            ); 
+      }
+
+      @include xl{ // > 1240
+            background-image: url('../img/poster-desktop@1x.jpg');
+            background-image: image-set(
+                  url('../img/poster-desktop@2x.webp') 2x,
+                  url('../img/poster-desktop@1x.webp') 1x,
+                  url('../img/poster-desktop@2x.jpg') 2x,
+                  url('../img/poster-desktop@1x.jpg') 1x,
+            ); 
+      }
+
+      @include xxl{ // > 1600 
+            background-image: url('../img/poster-desktop@2x.jpg');
+            background-image: image-set(
+                  url('../img/poster-desktop@2x.webp') 2x,
+                  url('../img/poster-desktop@2x.jpg') 2x,
+                  
+            ); 
+      }
+
+
+      &__container {
+            min-height: 554px;
+
+      }
+
+      &__title {
+      }
+
+      &__subtitle {
+      }
+}
+
