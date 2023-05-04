@@ -95,26 +95,32 @@ iframe {
 
 .container {
   // max-width: 1240px;
-  padding: 0 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 
   @include sm{  
-    padding: 0 24px; 
-   
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px; 
+    padding-bottom: 24px;
   }
 
   @include md{  
-    padding: 0 32px; 
+    padding-left: 32px;
+    padding-right: 32px;
+    
   }
 
- 
   @include xl{  
-    padding: 0 30px; 
+    padding-left: 30px; 
+    padding-right: 30px;
   }
 
   @include xxl{  // 4K
     max-width: 2560px;
-    padding: 0 60px; 
+    padding-left: 60px; 
+    padding-right: 60px;
   }
 
  

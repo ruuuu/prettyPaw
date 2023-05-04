@@ -79,6 +79,23 @@
             line-height: 1;
             text-transform: uppercase;
             color: $back;
+
+            @include md{  // >768
+                  font-size: 40px;
+            }
+
+            @include lg{ // >1024
+                  font-size: 52px;
+            }
+              
+            @include xl{   // >1240
+                  
+            }
+              
+            @include xxl{  // >1600
+                  
+            }
+
       }
 
 
@@ -87,6 +104,27 @@
             line-height: 1;
             text-transform: uppercase;
             color: $second;
+
+            // @include sm{   // >576
+                  
+            // }
+              
+            @include md{  // >768
+                 
+            }
+
+            @include lg{ // >1024
+                 font-size: 40px;
+            }
+              
+            @include xl{   // >1240
+                  
+            }
+              
+            @include xxl{  // >1600
+                  
+            }
+
       }
 }
 
