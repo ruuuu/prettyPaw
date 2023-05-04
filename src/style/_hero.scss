@@ -10,6 +10,21 @@
       background-size: cover;
       background-position: center;
 
+      &::before{ // градиент
+            content: '';
+            position: absolute;  // позиционируем относитльно .hero__container
+            z-index: 5;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+      }
+
+      &__video-bg{
+            z-index: 8; // значение выбрали между z-index у hero::before и .hero__container
+      }
+
       @include md{ // > 768
             background-image: url('../img/posterxl@1x.jpg');
             background-image: image-set(
@@ -39,14 +54,39 @@
 
 
       &__container {
+            position: relative;
+            z-index: 10; // чтобы текст был выше, указываем больше чем у .hero::before
             min-height: 554px;
+            padding-bottom: 50px;
+            padding-top: 120px;
+            display: flex;
+            flex-direction: column;  
+            justify-content: flex-end;
 
+            @include xl{ // > 1240px
+                  min-height: 780px;
+            }
+
+            @include xxl{ // > 1600px
+                  min-height: 100vh; /* на всю высоту экрана */
+            }
       }
+
 
       &__title {
+            margin-bottom: 24px;
+            font-size: 40px;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $back;
       }
 
+
       &__subtitle {
+            font-size: 20px;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $second;
       }
 }
 
