@@ -1,5 +1,5 @@
 import './index.html';
-import 'swiper/scss';
+import 'swiper/scss';  //  подключам свайпер
 import 'swiper/scss/pagination';
 
 

@@ -63,11 +63,16 @@
             flex-direction: column;  
             justify-content: flex-end;
 
-            @include xl{ // > 1240px
-                  min-height: 780px;
+            @include lg{   // > 1024px
+                  padding-bottom: 74px;
             }
 
-            @include xxl{ // > 1600px
+            @include xl{   // > 1240px
+                  min-height: 780px;
+                  padding-bottom: 100px;
+            }
+
+            @include xxl{  // > 1600px
                   min-height: 100vh; /* на всю высоту экрана */
             }
       }
@@ -113,7 +118,7 @@
                  
             }
 
-            @include lg{ // >1024
+            @include lg{  // >1024
                  font-size: 40px;
             }
               

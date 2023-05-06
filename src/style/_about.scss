@@ -1,0 +1,162 @@
+.about {
+      padding: 80px 0;
+
+      @include lg{ // >1024
+            padding: 100px 0;
+      }
+    
+
+      &__container {
+            padding-left: 16px;
+            padding-right: 16px;
+      }
+
+
+      &__title {
+            margin-bottom: 24px;
+            font-weight: 1000;
+            font-size: 32px;
+            line-height: 1;
+            text-transform: uppercase;
+            color: $second;
+
+            @include sm{  // >576
+      
+            }
+            
+            
+            @include md{  // >768
+                 
+            }
+            
+            
+            @include lg{  // > 1024
+                  font-size: 52px;  
+            }
+            
+            
+            @include xl{  // > 1240
+                 
+                  
+            }
+            
+            
+            @include xxl{ // >1600
+                 
+            }
+      }
+
+
+      &__content {
+            margin-bottom: 13px;
+            padding-bottom: 27px;
+            background-image: url('../img/paw.svg');
+            background-repeat: no-repeat;
+            background-size: contain;  // чтобы картинка не обрезалась(cover обрезает картинку)
+            // background-size: 254px 220px;
+            background-position: center bottom;
+            
+            
+            @include md{  // >768
+                  display: grid;
+                  grid-template-columns: 1fr min-content;  // min-content - минимально возможный размер
+                  grid-template-areas: 
+                        'description list'
+                        'link   .'
+                  ;
+                  gap: 24px 92px;
+                  // background-size: 217px 188px;
+                   background-position: bottom right;
+            }
+            
+            
+            // @include lg{  // > 1024 
+            //       font-size: 52px; 
+            //       background-size: 358px 310px;
+            // }
+            
+            
+            // @include xl{  // > 1240
+            //       background-size: 512px 443px;
+                  
+            // }
+            
+      }
+
+
+      &__description {
+            margin-bottom: 24px;
+
+            @include md{ // грид элемент
+                  grid-area: description;
+            }
+      }
+
+
+      &__link {
+            margin-bottom: 40px;
+           
+            @include md{ // грид элемент
+                  grid-area: link;
+                  justify-self: start;  // выравнивание по горизонтали
+                  margin-bottom: 0;
+            }
+      }
+
+
+      &__count-list {
+            display: grid;
+            grid-template-columns: repeat(2, 120px);
+            align-items: center;
+            gap: 20px;  
+            font-weight: 1000; 
+            color: $second;
+            line-height: 1;
+
+            @include md{ // грид элемент
+                  grid-area: list;
+                  align-self: flex-start;
+            }
+
+      }
+
+
+      &__count-item {
+          
+      }
+
+
+      &__count {
+            margin-bottom: 16px;
+            font-size: 40px;
+      }
+
+
+      &__count-desc {
+            font-size: 16px; 
+      }
+
+
+      &__picture {
+      }
+
+
+      &__slider {
+      }
+
+
+      &__image-list {
+      }
+
+
+      &__image-item {
+      }
+
+
+      &__image-wrapper {
+      }
+
+
+      &__slider-pagination {
+      }
+}
