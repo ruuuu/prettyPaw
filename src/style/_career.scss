@@ -97,8 +97,12 @@
 
 
       &__image-list{
-            display: flex;
-            align-items: center;
+
+            @include md{  // > 768
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
       }
     
 
@@ -141,18 +145,9 @@
       }
 
 
-
       &__image {
             border-radius: 16px;
-
-           
-           
       }
-
-
-   
-    
-    
 
 
       &__slider-pagination {
