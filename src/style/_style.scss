@@ -185,5 +185,13 @@ iframe {
   background-color: $back;
   width: 40px;
   border-radius: 16px;
+}
 
+
+.career__slider-pagination{
+  
+  @include md{  // >768
+    display: none;
+  }
+ 
 }

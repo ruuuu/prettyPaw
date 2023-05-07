@@ -1,37 +1,159 @@
 .career {
       padding-top: 40px;
       padding-bottom: 30px;
+      padding-left: 0;
+      padding-right: 0;
 
-      &__contaner {
+
+      &__container {
+
+            @include md{  // > 768
+                  display: grid;
+                  grid-template-columns: minmax(528px 1fr) 155px;  // min-content - минимально возможный размер
+                  grid-template-areas: 
+                        'title link'
+                        'description  .'
+                        'slider slider';
+                 gap:  21px;
+            }
+
+            @include lg{  // > 1024
+                  grid-template-columns: minmax(720px 1fr) 209px;  
+            } 
+
+
+            @include xl{  // > 1240
+                  grid-template-columns: minmax(690px 1fr) 209px;  
+            } 
 
       }
+
 
       &__title {
+            margin-bottom: 24px;
+            font-size: 32px;
+            color: $second;
+            text-transform: uppercase;
+
+            @include md{  // > 768
+                  grid-area: title;
+            }
+
+            @include lg{  // > 1024
+                  font-size: 52px;
+            }
       }
+
 
       &__content {
+
+
+           
+
       }
 
-      &__description {
+
+      &__description {  // грид элемент
+            margin-bottom: 24px;
+            font-size: 16px;
+            
+
+            @include md{  // > 768
+                  grid-area: description;
+                  min-width: 528px;
+                  margin-bottom: 40px;
+            }
+
+            @include lg{  // > 1024
+                  min-width: 728px;
+                  margin-bottom: 50px;
+                  font-size: 20px;
+            }
       }
 
-      &__link {
+
+      &__link {  // грид элемент
+            margin-bottom: 40px;
+
+            @include md{  // > 768
+                  grid-area: link;
+                  justify-self: end;
+            }
+
+            @include lg{  // > 1024
+                  font-size: 20px;
+            }
+
       }
 
-      &__slider {
+
+      &__slider {  // грид элемент
+
+            @include md{  // > 768
+                  grid-area: slider;
+                  width: 100%;
+            }
       }
 
-      &__image-list {
+
+      &__image-list{
+            display: flex;
+            align-items: center;
+      }
+    
+
+      &__image-item{
+
+            @include md{  // > 768
+                  width: 244px;
+                  height: 244px;
+            }
+
+            @include lg{ // > 1024
+                  width: 333px;
+                  height: 333px;
+            }
+
+            @include xl{ // >  1240
+                  width: 379px;
+                  height: 379px;
+            }
+
       }
 
-      &__image-item {
+
+      &__image-item:nth-child(2n+1){
+
+            @include md{  // > 768
+                  width: 177px;
+                  height: 177px;
+            }   
+
+            @include lg{ // > 1024
+                  width: 242px;
+                  height: 241px;
+            }
+
+            @include xl{ // >  1240
+                  width: 275px;
+                  height: 274px;
+            }
       }
 
-      &__image-wrapper {
-      }
+
 
       &__image {
+            border-radius: 16px;
+
+           
+           
       }
+
+
+   
+    
+    
+
 
       &__slider-pagination {
       }

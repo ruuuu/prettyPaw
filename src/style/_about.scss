@@ -13,7 +13,7 @@
                   grid-template-columns:  48% 1fr;
                   gap: 40px 20px;
                   grid-template-areas: 
-                        'title  title'
+                        'title title'
                         'slider content';
             }
 
@@ -23,7 +23,6 @@
                   grid-template-areas: 
                         'slider title'
                         'slider content';
-
             }
       }
 
@@ -80,8 +79,7 @@
 
             @include xl {  // > 1240
                   gap: 60px;  
-            }
-            
+            }    
       }
 
 
@@ -126,7 +124,6 @@
             @include lg{ // > 1024
                   grid-template-columns: repeat(2, 200px);
             }
-
       }
 
 
@@ -160,7 +157,6 @@
                   grid-area: slider; 
                   border-radius: 16px;
             }
-      
       }
 
 
@@ -173,7 +169,5 @@
       &__image {
             border-radius: 16px;
       }
-
-
-      
+ 
 }
