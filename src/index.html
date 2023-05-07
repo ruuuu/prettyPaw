@@ -56,7 +56,7 @@
 
     <section class="about">
       <div class="container about__container">
-        <h2 class="about__title">О компании</h2>
+        <h2 class="about__title">О&nbsp;компании</h2>
         
         <div class="about__content">
           <p class="about__description">
@@ -89,9 +89,10 @@
                   <source srcset="img/leo_tablet.webp" media="(min-width: 786px)" type="image/webp">
                   <source srcset="img/leo_tablet.jpg" media="(min-width: 786px)"><!--для >786px-->
                   <source srcset="img/leo.jpg" type="image/webp">
-                  <img src="img/leo.jpg" alt="Лев" loading="lazy"><!--для <768px-->
+                  <img class="about__image" src="img/leo.jpg" alt="Лев" loading="lazy"><!--для <768px-->
                 </picture>
               </li>
+
               <li class="about__image-item swiper-slide">
                 <picture class="about__image-wrapper">
                   <source srcset="img/giraffe_desktop.webp" media="(min-width: 1280px)" type="image/webp">
@@ -101,9 +102,10 @@
                   <source srcset="img/giraffe_tablet.webp" media="(min-width: 786px)" type="image/webp">
                   <source srcset="img/giraffe_tablet.jpg" media="(min-width: 786px)">
                   <source srcset="img/giraffe.jpg" type="image/webp">
-                  <img src="img/giraffe.jpg" alt="Жираф" loading="lazy">
+                  <img class="about__image" src="img/giraffe.jpg" alt="Жираф" loading="lazy">
                 </picture>
               </li>
+
               <li class="about__image-item swiper-slide">
                 <picture class="about__image-wrapper">
                   <source srcset="img/fulgens_desktop.webp" media="(min-width: 1280px)" type="image/webp">
@@ -113,9 +115,10 @@
                   <source srcset="img/fulgens_tablet.webp" media="(min-width: 786px)" type="image/webp">
                   <source srcset="img/fulgens_tablet.jpg" media="(min-width: 786px)">
                   <source srcset="img/fulgens.jpg" type="image/webp">
-                  <img src="img/fulgens.jpg" alt="Красная панда" loading="lazy">
+                  <img class="about__image" src="img/fulgens.jpg" alt="Красная панда" loading="lazy">
                 </picture>
               </li>
+               
               <li class="about__image-item swiper-slide">
                 <picture class="about__image-wrapper">
                   <source srcset="img/parrots_desktop.webp" media="(min-width: 1280px)" type="image/webp">
@@ -125,10 +128,11 @@
                   <source srcset="img/parrots_tablet.webp" media="(min-width: 786px)" type="image/webp">
                   <source srcset="img/parrots_tablet.jpg" media="(min-width: 786px)">
                   <source srcset="img/parrots.jpg" type="image/webp">
-                  <img src="img/parrots.jpg" alt="Попугай" loading="lazy">
+                  <img class="about__image" src="img/parrots.jpg" alt="Попугай" loading="lazy">
                 </picture>
               </li>
             </ul>
+
             <!-- If we need pagination -->
             <div class="about__slider-pagination swiper-pagination"></div>
           </div>
@@ -175,7 +179,7 @@
           <a class="career__link link-main" href="#career">Подробнее</a>
         </div>
 
-        
+        <!-- сладйер -->
           <div class="career__slider swiper">
             <ul class="career__image-list swiper-wrapper">
               <!-- Slides -->

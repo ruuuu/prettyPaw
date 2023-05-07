@@ -1,14 +1,30 @@
 .about {
       padding: 80px 0;
 
-      @include lg{ // >1024
+      @include lg{ // > 1024
             padding: 100px 0;
       }
     
 
       &__container {
-            padding-left: 16px;
-            padding-right: 16px;
+
+            @include lg{ // > 1024
+                  display: grid;
+                  grid-template-columns:  48% 1fr;
+                  gap: 40px 20px;
+                  grid-template-areas: 
+                        'title  title'
+                        'slider content';
+            }
+
+            @include xl{  // > 1240
+                  grid-template-rows: min-content 1fr;  // min-content значит мин возможный, оставшееся пространоство займет 2 ой столбец
+                  gap: 40px 30px;
+                  grid-template-areas: 
+                        'slider title'
+                        'slider content';
+
+            }
       }
 
 
@@ -20,30 +36,12 @@
             text-transform: uppercase;
             color: $second;
 
-            @include sm{  // >576
-      
-            }
-            
-            
-            @include md{  // >768
-                 
-            }
-            
-            
-            @include lg{  // > 1024
+            @include lg{  // > 1024  грид элемент
+                  grid-area: title;  
+                  margin-bottom: 0;
                   font-size: 52px;  
             }
             
-            
-            @include xl{  // > 1240
-                 
-                  
-            }
-            
-            
-            @include xxl{ // >1600
-                 
-            }
       }
 
 
@@ -53,33 +51,36 @@
             background-image: url('../img/paw.svg');
             background-repeat: no-repeat;
             background-size: contain;  // чтобы картинка не обрезалась(cover обрезает картинку)
-            // background-size: 254px 220px;
             background-position: center bottom;
             
             
-            @include md{  // >768
+            @include md{  // > 768
                   display: grid;
                   grid-template-columns: 1fr min-content;  // min-content - минимально возможный размер
                   grid-template-areas: 
                         'description list'
-                        'link   .'
-                  ;
+                        'link   .';
                   gap: 24px 92px;
-                  // background-size: 217px 188px;
-                   background-position: bottom right;
+                  background-position: bottom right;
             }
-            
-            
-            // @include lg{  // > 1024 
-            //       font-size: 52px; 
-            //       background-size: 358px 310px;
-            // }
-            
-            
-            // @include xl{  // > 1240
-            //       background-size: 512px 443px;
-                  
-            // }
+
+            @include lg { // > 1024
+                  grid-template-columns: 1fr;
+                  grid-template-rows: min-content;
+                  gap: 40px;
+                  margin-bottom: 0;
+                  grid-area: content; 
+                  grid-template-areas: 
+                        'description'
+                        'list'
+                        'link';
+                  padding-bottom: 0;
+                  background-position: center;      
+            }
+
+            @include xl {  // > 1240
+                  gap: 60px;  
+            }
             
       }
 
@@ -93,13 +94,17 @@
       }
 
 
-      &__link {
+      &__link { // грид элемент
             margin-bottom: 40px;
            
-            @include md{ // грид элемент
+            @include md{ 
                   grid-area: link;
                   justify-self: start;  // выравнивание по горизонтали
                   margin-bottom: 0;
+            }
+            
+            @include lg{
+                  align-self: end; 
             }
       }
 
@@ -113,9 +118,13 @@
             color: $second;
             line-height: 1;
 
-            @include md{ // грид элемент
+            @include md{ // > 768  грид элемент
                   grid-area: list;
                   align-self: flex-start;
+            }
+
+            @include lg{ // > 1024
+                  grid-template-columns: repeat(2, 200px);
             }
 
       }
@@ -129,34 +138,42 @@
       &__count {
             margin-bottom: 16px;
             font-size: 40px;
+
+            @include lg{ // > 1024
+                  font-size: 52px;
+            }
       }
 
 
       &__count-desc {
             font-size: 16px; 
+
+            @include lg{ // > 1024
+                  font-size: 20px;
+            }
       }
 
 
-      &__picture {
+      &__picture {  // грид элемент
+
+            @include lg{
+                  grid-area: slider; 
+                  border-radius: 16px;
+            }
+      
       }
 
 
-      &__slider {
+      &__slider { 
+
+           
       }
 
 
-      &__image-list {
+      &__image {
+            border-radius: 16px;
       }
 
 
-      &__image-item {
-      }
-
-
-      &__image-wrapper {
-      }
-
-
-      &__slider-pagination {
-      }
+      
 }
