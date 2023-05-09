@@ -1,0 +1,160 @@
+.location {
+
+      &__container {
+            padding-left: 0;
+            padding-right: 0;
+
+            @include sm{  // > 576
+                 padding-left: 0;
+                 padding-right: 0;   
+            }
+ 
+           
+      }
+
+
+      &__list {
+      }
+
+
+      &__item {
+            position: relative;
+            min-height: 273px; //для переполнения, чтоб текст не выпадал и блока
+            padding: 50px 16px;
+
+            @include sm{  // > 576
+                 padding-left: 32px;
+                 padding-right: 32px;
+                  min-height: 200px; //для переполнения      
+            }
+
+            &::before{
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background-size: cover;  // заполняет все пространство
+                  background-position: center;
+                  z-index: -1;  // чтобы картинка была под текстом
+            }
+
+            &--mamals::before {
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/mammals.jpg');
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  image-set(
+                        url('../img/mammals.webp') 1x, 
+                        url('../img/mammals.jpg') 1x, 
+                        url('../img/mammals_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                        url('../img/mammals_2x.jpg') 2x
+                  ); 
+                  
+                  @include sm{  // > 576
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/mammals_tablet.jpg');
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        image-set(
+                              url('../img/mammals_tablet.webp') 1x, 
+                              url('../img/mammals_tablet.jpg') 1x, 
+                              url('../img/mammals_tablet_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                              url('../img/mammals_tablet_2x.jpg') 2x
+                        ); 
+                  }
+            }
+
+            &--birds::before {
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/birds.jpg');
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  image-set(
+                        url('../img/birds.webp') 1x, 
+                        url('../img/birds.jpg') 1x, 
+                        url('../img/birds_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                        url('../img/birds_2x.jpg') 2x
+                  ); 
+
+                  @include sm{  // > 576
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/birds_tablet.jpg');
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        image-set(
+                              url('../img/birds_tablet.webp') 1x, 
+                              url('../img/birds_tablet.jpg') 1x, 
+                              url('../img/birds_tablet_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                              url('../img/birds_tablet_2x.jpg') 2x
+                        ); 
+                  }
+            }
+      
+            &--reptilis::before {
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/reptiles.jpg');
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  image-set(
+                        url('../img/reptiles.webp') 1x, 
+                        url('../img/reptiles.jpg') 1x, 
+                        url('../img/reptiles_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                        url('../img/reptiles_2x.jpg') 2x
+                  ); 
+                  
+                  @include sm{  // > 576
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/reptiles_tablet.jpg');
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        image-set(
+                              url('../img/reptiles_tablet.webp') 1x, 
+                              url('../img/reptiles_tablet.jpg') 1x, 
+                              url('../img/reptiles_tablet_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                              url('../img/reptiles_tablet_2x.jpg') 2x
+                        ); 
+                  }
+            }
+      
+            &--water::before {
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water.jpg');
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water.jpg');
+                  @include sm{  // > 576
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water_tablet.jpg');
+                  }
+            }
+      
+            &--insects::before {
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects.jpg');
+                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects.jpg');
+                  @include sm{  // > 576
+                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects_tablet.jpg');
+                  }
+            }
+
+            
+            &::after{  // псевдоэлмент- белая гор линия
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  bottom: 0;
+                  right: 50%; // отсноситльно своего родителя
+ 
+                  width: calc(100% - 32px);
+                  height: 0.5px;
+
+                  background-color: $second;
+                  transform: translate(50%, 0.5px);  // свинули на 50% вправо
+            }            
+
+      }
+
+
+      &__title {
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            color: $back;
+            font-weight: 1000;
+            line-height: 1;
+            font-size: 20px;  
+      }
+
+
+      &__description {
+            color: $second;
+      }
+
+
+}
+
+

@@ -2,8 +2,8 @@
       position: relative; /* для видео*/
       background-image: url('../img/poster@1x.jpg');
       background-image: image-set(
-            url('../img/poster@2x.webp') 2x,
-            url('../img/poster@1x.webp') 1x,
+            url('../img/poster@2x.webp') 2x, /* 2x для ретиновых дисплеев (DPR:2.0) */
+            url('../img/poster@1x.webp') 1x, /* 1x для обычных дисплеев (DPR:1.0) */
             url('../img/poster@2x.jpg') 2x,
             url('../img/poster@1x.jpg') 1x
       );
@@ -36,7 +36,7 @@
       @include xl{ // > 1240
             background-image: url('../img/posterxl@1x.jpg');
             background-image: image-set(
-                  url('../img/posterxl@4x.webp') 2x,
+                  url('../img/posterxl@4x.webp') 2x, /* 2x для ретиновых дисплеев */ 
                   url('../img/posterxl@2x.webp') 1x,
                   url('../img/posterxl@4x.jpg') 2x,
                   url('../img/posterxl@2x.jpg') 1x
@@ -47,8 +47,7 @@
             background-image: url('../img/posterxl@4x.jpg');
             background-image: image-set(
                   url('../img/posterxl@4x.webp') 2x,
-                  url('../img/posterxl@4x.jpg') 2x
-                  
+                  url('../img/posterxl@4x.jpg') 2x 
             ); 
       }
 
@@ -92,15 +91,6 @@
             @include lg{ // >1024
                   font-size: 52px;
             }
-              
-            @include xl{   // >1240
-                  
-            }
-              
-            @include xxl{  // >1600
-                  
-            }
-
       }
 
 
@@ -110,26 +100,9 @@
             text-transform: uppercase;
             color: $second;
 
-            // @include sm{   // >576
-                  
-            // }
-              
-            @include md{  // >768
-                 
-            }
-
             @include lg{  // >1024
                  font-size: 40px;
             }
-              
-            @include xl{   // >1240
-                  
-            }
-              
-            @include xxl{  // >1600
-                  
-            }
-
       }
 }
 

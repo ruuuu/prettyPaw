@@ -48,7 +48,7 @@
         <p class="hero__subtitle">C&nbsp;заботой о&nbsp;животных</p><!--проверили через https://www.artlebedev.ru/typograf/-->
       </div>
 
-      <video class="hero__video-bg video-bg" loading="lazy" autoplay loop muted>
+      <video class="hero__video-bg video-bg" loading="lazy" autoplay loop muted playsinline><!-- playsinline нужен чтобы на мобилках не открыть видео на всю станицу-->
         <!-- <source srcset="video/video.webm" type="video/webm">
         <source srcset="video/video.mp4" type="video/mp4"> -->
       </video>
@@ -144,23 +144,23 @@
       <div class="container location__container">
         <h2 class="visually-hidden">Локация зоопарка</h2><!--скрытые загловки нужны для слепых и сео-->
         <ul class="location__list">
-          <li class="location__item">
+          <li class="location__item location__item--mamals">
             <h3 class="location__title">Млекопитающие</h3>
             <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
           </li>
-          <li class="location__item">
+          <li class="location__item location__item--birds">
             <h3 class="location__title">Птицы</h3>
             <p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
           </li>
-          <li class="location__item">
+          <li class="location__item location__item--reptilis">
             <h3 class="location__title">Рептилии</h3>
             <p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем зоосаде можно увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
           </li>
-          <li class="location__item">
+          <li class="location__item location__item--water">
             <h3 class="location__title">Водный мир</h3>
             <p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и&nbsp;обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно увидеть таких рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
           </li>
-          <li class="location__item">
+          <li class="location__item location__item--insects">
             <h3 class="location__title">Насекомые</h3>
             <p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или зависят от&nbsp;воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и&nbsp;других водных животных.</p>
           </li>

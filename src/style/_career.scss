@@ -9,7 +9,7 @@
 
             @include md{  // > 768
                   display: grid;
-                  grid-template-columns: minmax(528px 1fr) 155px;  // min-content - минимально возможный размер
+                  grid-template-columns: minmax(528px, 1fr) 155px;  // min-content - минимально возможный размер
                   grid-template-areas: 
                         'title link'
                         'description  .'
@@ -18,7 +18,7 @@
             }
 
             @include lg{  // > 1024
-                  grid-template-columns: minmax(720px 1fr) 209px;  
+                  grid-template-columns: minmax(720px, 1fr) 209px;  
             } 
 
 

@@ -39,8 +39,7 @@
                   grid-area: title;  
                   margin-bottom: 0;
                   font-size: 52px;  
-            }
-            
+            }    
       }
 
 
@@ -51,7 +50,6 @@
             background-repeat: no-repeat;
             background-size: contain;  // чтобы картинка не обрезалась(cover обрезает картинку)
             background-position: center bottom;
-            
             
             @include md{  // > 768
                   display: grid;
