@@ -22,20 +22,23 @@ slidersInit('.career__slider ', {  // сладер для "Карьера"
       breakpoints: {
             
             768: {
-              slidesPerView: 3,  // кол-во слайдв на странице
-              spaceBetween: 20
+              slidesPerView: 'auto',  // кол-во слайдв на странице
+              spaceBetween: 20,
+              pagination: false  // отклбчли пагинацию
             },
 
            
             1024: {
-              slidesPerView: 3,
-              spaceBetween: 26
+              slidesPerView: 'auto', //3
+              spaceBetween: 26,
+              pagination: false
             },
 
             
             1240: {
-              slidesPerView: 4,
-              spaceBetween: 30
+              slidesPerView: 'auto', // 4
+              spaceBetween: 30,
+              pagination: false
             }
           }
       }
@@ -48,3 +51,11 @@ videoBg.innerHTML = `
       <source src="video/video.webm" type="video/webm">
       <source src="video/video.mp4" type="video/mp4"> 
 `;
+
+
+
+// const videoBgLocation = document.querySelector('.video-bg-location');
+// videoBgLocation.innerHTML = `
+//       <source src="video/video.webm" type="video/webm">
+//       <source src="video/video.mp4" type="video/mp4"> 
+// `;

@@ -1,0 +1,89 @@
+.footer {
+      padding-top: 20px;
+      padding-bottom: 30px;
+
+      &__container {
+
+            @include sm{ // 
+                  display: grid;
+                  grid-template-columns: 1fr max-content; // max-content - максимально возможный
+                  grid-template-areas:
+                        'logo social'
+                        'copiryght developers';
+                  gap: 40px;     
+            }
+
+            @include lg{ // >1024
+                  gap: 72px;  
+                  font-size: 20px;   
+            }
+
+            @include xl{ // 
+                  gap: 78px;  
+            }
+      }
+
+
+      &__logo {
+            margin-bottom: 32px;
+            width: 200px;
+
+            @include md{ // >768
+                  grid-area: logo;
+                  width: 360px;
+            }
+      }
+
+
+      &__social-list {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 52px;
+
+            @include md{ // >768
+                  grid-area: social;
+            }
+
+            @include lg{
+                  gap: 36px;
+            }
+      }
+
+
+      &__social-item {
+      }
+
+
+      &__socila-link {
+            display: block;
+            width: 36px;
+
+            @include lg{ // >1024
+                  width: 50px;
+            }
+      }
+
+
+      &__developers {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 52px;
+            gap: 19px;
+
+            @include md{ // >768
+                  grid-area: developers;
+            }
+      }
+
+
+      &__developer {
+      }
+
+
+      &__copyright {
+            @include md{ // >768
+                  grid-area: copiryght;
+            }
+      }
+}
+

@@ -22,7 +22,7 @@
       }
 
       &__video-bg{
-            z-index: 8; // значение выбрали между z-index у hero::before и .hero__container
+            z-index: 3; // значение выбрали между z-index у hero::before и .hero__container
       }
 
       @include md{ // > 768

@@ -8,7 +8,7 @@ const params = {
             delay: 3500,  //  зажержка между слайдами в сек
             disableOnInteraction: false,  // после взаимодействия со сладйером, он продолжит рабоать
       },
-      sliderPerView: 1, // число отображаемыз слайдов на странице
+      slidesPerView: 1, // число отображаемыз слайдов на странице
       pagination: {
             el: '.swiper-pagination'
       },

@@ -3,29 +3,42 @@
       padding-bottom: 30px;
       padding-left: 0;
       padding-right: 0;
+      overflow-x: hidden;  // чтоб гор скролла не было
+
+      @include lg{  // >1024
+            padding-top: 100px;
+            padding-bottom: 100px;
+      }
 
 
       &__container {
 
+      }
+
+
+      &__content {
+            margin-bottom: 40px;
+
             @include md{  // > 768
                   display: grid;
-                  grid-template-columns: minmax(528px, 1fr) 155px;  // min-content - минимально возможный размер
+                  grid-template-columns: 1fr min-content;  // min-content - минимально возможный размер
+                  justify-content: space-between;
                   grid-template-areas: 
                         'title link'
-                        'description  .'
-                        'slider slider';
-                 gap:  21px;
+                        'description  .';
+                  gap: 11px 21px;
             }
 
-            @include lg{  // > 1024
-                  grid-template-columns: minmax(720px, 1fr) 209px;  
-            } 
 
+            @include lg{  // >1024
+                  grid-template-columns: 720px min-content;
+                  gap: 27px 31px;
+                  margin-bottom: 50px;
+            }
 
-            @include xl{  // > 1240
-                  grid-template-columns: minmax(690px 1fr) 209px;  
-            } 
-
+            @include xl{  
+                  grid-template-columns: 690px min-content;
+            }
       }
 
 
@@ -37,6 +50,7 @@
 
             @include md{  // > 768
                   grid-area: title;
+                  margin-bottom: 0;
             }
 
             @include lg{  // > 1024
@@ -45,30 +59,16 @@
       }
 
 
-      &__content {
-
-
-           
-
-      }
-
-
       &__description {  // грид элемент
             margin-bottom: 24px;
             font-size: 16px;
             
-
             @include md{  // > 768
                   grid-area: description;
-                  min-width: 528px;
-                  margin-bottom: 40px;
+                  // min-width: 528px;
+                  margin-bottom: 0;
             }
 
-            @include lg{  // > 1024
-                  min-width: 728px;
-                  margin-bottom: 50px;
-                  font-size: 20px;
-            }
       }
 
 
@@ -77,72 +77,55 @@
 
             @include md{  // > 768
                   grid-area: link;
-                  justify-self: end;
+                  margin-bottom: 0;
             }
 
             @include lg{  // > 1024
                   font-size: 20px;
             }
-
       }
 
 
-      &__slider {  // грид элемент
-
-            @include md{  // > 768
-                  grid-area: slider;
-                  width: 100%;
-            }
+      &__slider {  
+            overflow: visible;  //  стили свайпера: overflow: hidden. Убрали это значение
       }
 
 
       &__image-list{
 
-            @include md{  // > 768
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-            }
       }
     
 
       &__image-item{
+            height: unset;  // убираем значение установленное свайпером
+            display: flex;
+            align-items: center;
 
             @include md{  // > 768
-                  width: 244px;
-                  height: 244px;
+                  &:nth-child(odd){
+                        width: 34%;   // 244px
+                  }
+
+                  &:nth-child(even){
+                        width: 25%;  // 177px
+                  }
             }
 
-            @include lg{ // > 1024
-                  width: 333px;
-                  height: 333px;
-            }
 
-            @include xl{ // >  1240
-                  width: 379px;
-                  height: 379px;
-            }
+            @include xl{  // 
+                  &:nth-child(odd){
+                        width: 28%;   // 379px
+                  }
 
-      }
-
-
-      &__image-item:nth-child(2n+1){
-
-            @include md{  // > 768
-                  width: 177px;
-                  height: 177px;
-            }   
-
-            @include lg{ // > 1024
-                  width: 242px;
-                  height: 241px;
-            }
-
-            @include xl{ // >  1240
-                  width: 275px;
-                  height: 274px;
+                  &:nth-child(even){
+                        width: 20%;  // 275px
+                  }
             }
       }
+      
+     
+
+      
 
 
       &__image {

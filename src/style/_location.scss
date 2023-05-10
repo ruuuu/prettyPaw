@@ -5,10 +5,10 @@
             padding-left: 0;
             padding-right: 0;
 
-            // @include sm{  // > 576
-            //      padding-left: 0;
-            //      padding-right: 0;   
-            // }  
+            @include sm{  // > 576
+                 padding-left: 0;
+                 padding-right: 0;   
+            }  
       }
 
 
@@ -233,8 +233,8 @@
                   }
             }
 
-
-            &::after{  // псевдоэлмент- белая гор линия
+            // у всех кроме посденего:
+            &:not(:last-child)::after{  // псевдоэлмент- белая гор линия
                   content: '';
                   position: absolute;
                   display: block;
