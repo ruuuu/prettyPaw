@@ -1,26 +1,43 @@
 .location {
+      
 
       &__container {
             padding-left: 0;
             padding-right: 0;
 
-            @include sm{  // > 576
-                 padding-left: 0;
-                 padding-right: 0;   
-            }
- 
-           
+            // @include sm{  // > 576
+            //      padding-left: 0;
+            //      padding-right: 0;   
+            // }  
       }
 
 
       &__list {
+
+            @include lg{ // > 1024
+                  display: flex;
+                  justify-content: space-between;
+                  min-height: 552px;
+                  //background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+            }
+
+            @include xl{ // > 1240
+                  min-height: 780px;
+            }
+
+            @include xxl{  // > 1600
+                  min-height: 100vh; // равна высоте экрана
+                  max-width: 2560px;
+                  margin: 0 auto;
+            }
       }
 
 
       &__item {
             position: relative;
-            min-height: 273px; //для переполнения, чтоб текст не выпадал и блока
+            min-height: 273px; //для переполнения, чтоб текст не выпадал из блока
             padding: 50px 16px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 
             @include sm{  // > 576
                  padding-left: 32px;
@@ -28,7 +45,18 @@
                   min-height: 200px; //для переполнения      
             }
 
-            &::before{
+            @include lg{ //  > 1024
+                  background-image: none;
+                  flex-grow:0;
+                  flex-shrink: 0;
+                  flex-basis: calc(100% / 5);  // исходный размер(до увеличения/сжатия)
+                  padding: 0;
+            }
+
+
+
+
+            &::before{  // фон для текста
                   content: '';
                   position: absolute;
                   top: 0;
@@ -40,9 +68,10 @@
                   z-index: -1;  // чтобы картинка была под текстом
             }
 
+
             &--mamals::before {
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/mammals.jpg');
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  background-image:  url('../img/mammals.jpg');
+                  background-image: 
                   image-set(
                         url('../img/mammals.webp') 1x, 
                         url('../img/mammals.jpg') 1x, 
@@ -51,8 +80,8 @@
                   ); 
                   
                   @include sm{  // > 576
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/mammals_tablet.jpg');
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        background-image:  url('../img/mammals_tablet.jpg');
+                        background-image: 
                         image-set(
                               url('../img/mammals_tablet.webp') 1x, 
                               url('../img/mammals_tablet.jpg') 1x, 
@@ -60,11 +89,22 @@
                               url('../img/mammals_tablet_2x.jpg') 2x
                         ); 
                   }
+
+                  @include lg{ //  > 1024
+                        background-image:  url('../img/mammals_laptop.jpg');
+                        background-image:  
+                        image-set(
+                              url('../img/mammals_laptop.webp') 1x, 
+                              url('../img/mammals_laptop.jpg') 1x 
+                              /*добавить 2x*/
+                        ); 
+                  }
             }
 
+
             &--birds::before {
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/birds.jpg');
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  background-image:  url('../img/birds.jpg');
+                  background-image: 
                   image-set(
                         url('../img/birds.webp') 1x, 
                         url('../img/birds.jpg') 1x, 
@@ -73,8 +113,8 @@
                   ); 
 
                   @include sm{  // > 576
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/birds_tablet.jpg');
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        background-image:  url('../img/birds_tablet.jpg');
+                        background-image:  
                         image-set(
                               url('../img/birds_tablet.webp') 1x, 
                               url('../img/birds_tablet.jpg') 1x, 
@@ -82,11 +122,22 @@
                               url('../img/birds_tablet_2x.jpg') 2x
                         ); 
                   }
+
+                  @include lg{ //  > 1024
+                        background-image:  url('../img/birds_laptop.jpg');
+                        background-image:  
+                        image-set(
+                              url('../img/birds_laptop.webp') 1x, 
+                              url('../img/birds_laptop.jpg') 1x 
+                              /*добавить 2x*/
+                        ); 
+                  }
             }
       
+
             &--reptilis::before {
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/reptiles.jpg');
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  background-image:  url('../img/reptiles.jpg');
+                  background-image: 
                   image-set(
                         url('../img/reptiles.webp') 1x, 
                         url('../img/reptiles.jpg') 1x, 
@@ -95,8 +146,8 @@
                   ); 
                   
                   @include sm{  // > 576
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/reptiles_tablet.jpg');
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        background-image:  url('../img/reptiles_tablet.jpg');
+                        background-image: 
                         image-set(
                               url('../img/reptiles_tablet.webp') 1x, 
                               url('../img/reptiles_tablet.jpg') 1x, 
@@ -104,25 +155,85 @@
                               url('../img/reptiles_tablet_2x.jpg') 2x
                         ); 
                   }
-            }
-      
-            &--water::before {
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water.jpg');
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water.jpg');
-                  @include sm{  // > 576
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/water_tablet.jpg');
+
+                  @include lg{ //  > 1024
+                        background-image:  url('../img/reptiles_laptop.jpg');
+                        background-image:  
+                        image-set(
+                              url('../img/reptiles_laptop.webp') 1x, 
+                              url('../img/reptiles_laptop.jpg') 1x 
+                              /*добавить 2x*/
+                        ); 
                   }
             }
       
-            &--insects::before {
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects.jpg');
-                  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects.jpg');
+
+            &--water::before {
+                  background-image:  url('../img/water.jpg');
+                  background-image: 
+                  image-set(
+                        url('../img/water.webp') 1x, 
+                        url('../img/water.jpg') 1x, 
+                        url('../img/water_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                        url('../img/water_2x.jpg') 2x
+                  );                  
+                 
                   @include sm{  // > 576
-                        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/insects_tablet.jpg');
+                        background-image:  url('../img/water_tablet.jpg');
+                        background-image: 
+                        image-set(
+                              url('../img/water_tablet.webp') 1x, 
+                              url('../img/water_tablet.jpg') 1x, 
+                              url('../img/water_tablet_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                              url('../img/water_tablet_2x.jpg') 2x
+                        );
+                  }
+
+                  @include lg{ //  > 1024
+                        background-image:  url('../img/water_laptop.jpg');
+                        background-image:  
+                        image-set(
+                              url('../img/water_laptop.webp') 1x, 
+                              url('../img/water_laptop.jpg') 1x 
+                              /*добавить 2x*/
+                        ); 
+                  }
+            }
+      
+
+            &--insects::before {
+                  background-image:  url('../img/insects.jpg');
+                  background-image: 
+                  image-set(
+                        url('../img/insects.webp') 1x, 
+                        url('../img/insects.jpg') 1x, 
+                        url('../img/insects_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                        url('../img/insects_2x.jpg') 2x
+                  );   
+
+                  @include sm{  // > 576
+                        background-image:  url('../img/insects_tablet.jpg');
+                        background-image: 
+                        image-set(
+                              url('../img/insects_tablet.webp') 1x, 
+                              url('../img/insects_tablet.jpg') 1x, 
+                              url('../img/insects_tablet_2x.webp') 2x,  /* 2x для ретиновых дисплеев (DPR:2.0) */
+                              url('../img/insects_tablet_2x.jpg') 2x
+                        );
+                  }
+
+                  @include lg{ //  > 1024
+                        background-image:  url('../img/insects_laptop.jpg');
+                        background-image:  
+                        image-set(
+                              url('../img/insects_laptop.webp') 1x, 
+                              url('../img/insects_laptop.jpg') 1x 
+                              /*добавить 2x*/
+                        ); 
                   }
             }
 
-            
+
             &::after{  // псевдоэлмент- белая гор линия
                   content: '';
                   position: absolute;
@@ -130,13 +241,25 @@
                   bottom: 0;
                   right: 50%; // отсноситльно своего родителя
  
-                  width: calc(100% - 32px);
+                  width: calc(100% - 32px); // 32=16*2
                   height: 0.5px;
 
                   background-color: $second;
                   transform: translate(50%, 0.5px);  // свинули на 50% вправо
-            }            
 
+                  @include lg{ // > 1024
+                        bottom: 50%;
+                        right: 0;
+
+                        width: 1px;
+                        height: calc(100% - 186px);  // 186=93*2
+                        transform: translate(0.5px, 50%);  
+                  }
+
+                  @include xl{ // > 1240
+                        height: calc(100% - 200px); 
+                  }
+            }            
       }
 
 
@@ -147,11 +270,30 @@
             font-weight: 1000;
             line-height: 1;
             font-size: 20px;  
+            white-space: nowrap;    // чтобы слова не переносились 
+
+            @include lg{ // > 1024
+                  position: absolute; // позиционируем относительно &__item
+                  top: 50%;
+                  left: 50%;
+                  margin-bottom: 0;
+                  transform: rotate(-90deg) translate(-50%, -50%);
+                  transform-origin: top left;  // меняет точку от котрой элемент поворачивается
+                  color: $second;
+            }
+
+            @include xl{  // > 1240
+                  font-size: 32px;
+            }
       }
 
 
       &__description {
             color: $second;
+
+            @include lg{ // > 1024
+                  display: none;
+            }
       }
 
 
